@@ -4,12 +4,10 @@ public abstract class Product {
     String name;
     double originalPrice;
     ProductType productType;
-
     Product() {};
-
-    Product(String name, double price, ProductType productType) {
+    public Product(String name, double originalPrice, ProductType productType) {
         this.name = name;
-        this.originalPrice = price;
+        this.originalPrice = originalPrice;
         this.productType = productType;
     }
 
@@ -18,4 +16,5 @@ public abstract class Product {
     public ProductType getProductType() {
         return productType;
     }
+
 }

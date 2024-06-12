@@ -1,7 +1,7 @@
 package Cart;
 
 public enum ProductType {
-    ELECTRONIC,
+    ELECTRONICS,
     FURNITURE,
-    DECORATIVE
+    ESSENTIALS
 }

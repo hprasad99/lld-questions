@@ -5,24 +5,26 @@ import java.util.List;
 
 public class TypeCouponDecorator extends CouponDecorator{
     Product product;
-    int discountPercentage;
+    int discountPercentages;
     ProductType productType;
-    static List<ProductType> eligibleTypes = new ArrayList<>();
+    static List<ProductType> eligibileProductTypes = new ArrayList<>();
     static {
-        eligibleTypes.add(ProductType.FURNITURE);
-        eligibleTypes.add(ProductType.DECORATIVE);
+        eligibileProductTypes.add(ProductType.ELECTRONICS);
+        eligibileProductTypes.add(ProductType.FURNITURE);
     }
 
-    public TypeCouponDecorator(Product product, int percentage, ProductType productType) {
+    TypeCouponDecorator(Product product, int discountPercentages, ProductType productType) {
         this.product = product;
-        this.discountPercentage = percentage;
+        this.discountPercentages = discountPercentages;
         this.productType = productType;
     }
+
+
     @Override
     public double getPrice() {
         double price = product.getPrice();
-        if(eligibleTypes.contains(productType)) {
-            return price - (price*discountPercentage)/100;
+        if(eligibileProductTypes.contains(productType)) {
+            return price - (price * discountPercentages)/100;
         }
         return price;
     }

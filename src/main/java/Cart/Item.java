@@ -1,8 +1,8 @@
 package Cart;
 
-public class Item2 extends Product{
+public class Item extends Product {
 
-    Item2(String name, ProductType productType,  double originalPrice) {
+    Item(String name, double originalPrice, ProductType productType) {
         super(name, originalPrice, productType);
     }
 
