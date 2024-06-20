@@ -1,0 +1,20 @@
+Clear food
+
+Restaurants can serve in multiple areas
+At a time, users can order from one restaurant, and the quantity of food can be more than one.
+Users should be able to rate any restaurant with or without comment. Rating of a restaurant is the average rating given by all customers.
+
+
+Functional Requirements
+Register Restaurant :  Register_restaurant(resturant_name, list of serviceable pin-codes, List<food item name, food item price, initial quantity>).
+Restaurant owners should be able to increase the quantity of the food item. update_quantity(restaurant name, food name, quantity to Add)
+Users should be able to rate(1(Lowest)-5(Highest)) any restaurant with or without comment. rate_restaurant(restaurant name, rating, comment)
+User should be able to get list of all serviceable restaurant, food item name and price in descending order: show_restaurant(rating/price,itemname?) Based on rating Based on Price
+A restaurant is serviceable when it delivers to the user's pincode and has non-zero quantity of food item. Place an order from any restaurant with any allowed quantity. place_order(restaurant name, List<food name, quantity>)
+Order History of User: For a given user you should be able to fetch order history.
+
+
+Note:-
+We can use in memory DB
+Do not create any UI for the application
+We can have driver class to simulate all these Operation
